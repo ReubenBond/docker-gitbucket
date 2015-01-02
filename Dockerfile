@@ -7,7 +7,9 @@ RUN \
   pacman-db-upgrade && \
   pacman -Syyu --noconfirm --noprogress jre8-openjdk-headless
 
-RUN mkdir /gitbucket && curl -o /gitbucket/gitbucket.war -L https://github.com/takezoe/gitbucket/releases/download/1.9/gitbucket.war
+RUN \
+  mkdir /gitbucket && \
+  curl -o /gitbucket/gitbucket.war -L https://github.com/takezoe/gitbucket/releases/download/1.9/gitbucket.war
 
 VOLUME ["/data"]
 EXPOSE 8080
