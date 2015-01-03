@@ -7,7 +7,7 @@ RUN \
   pacman-db-upgrade && \
   pacman -Syyu --noconfirm --noprogress jre8-openjdk-headless
 
-ENV GITBUCKET_VERSION 2.0
+ENV GITBUCKET_VERSION 2.1
 
 RUN \
   mkdir /gitbucket && \
